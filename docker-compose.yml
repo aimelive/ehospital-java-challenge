@@ -22,6 +22,7 @@ services:
       - java-be
 
   react-fe:
+    image: aimelive/ehospital-java-challenge
     build:
       context: ./react-fe
     ports:
