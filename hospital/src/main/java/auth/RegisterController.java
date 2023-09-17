@@ -37,16 +37,6 @@ public class RegisterController extends HttpServlet {
                 throw new IllegalArgumentException("Invalid user role");
             }
 
-            // System.out.println(user.getPassword());
-
-            // String pwd = user.getPassword();
-
-            // if (pwd == null) {
-            // throw new IllegalArgumentException("The password can not be null ");
-            // } else {
-            // throw new IllegalArgumentException("The password is not null");
-            // }
-
             ResponseEntity<User> result = user.register();
             HttpResponse.getResponse(res, result);
         } catch (Exception e) {

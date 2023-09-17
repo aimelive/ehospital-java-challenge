@@ -9,7 +9,6 @@ import javax.naming.AuthenticationException;
 import auth.Gender;
 import auth.Role;
 import auth.User;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import lombok.Getter;
 import lombok.NonNull;
@@ -41,9 +40,9 @@ public class Pharmacist extends User {
             throw new AuthenticationException("Incorrect phone number or password. Please try again.");
         }
 
-        Claims claims = Jwts.claims().setSubject(existPharmacist.phoneNumber);
-        claims.put("role", existPharmacist.role.name());
-        claims.put("phoneNumber", existPharmacist.phoneNumber);
+        // Claims claims = Jwts.claims().setSubject(existPharmacist.phoneNumber);
+        // claims.put("role", existPharmacist.role.name());
+        // claims.put("phoneNumber", existPharmacist.phoneNumber);
 
         Instant currentTimeInstant = Instant.now();
 

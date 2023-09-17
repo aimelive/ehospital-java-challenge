@@ -6,6 +6,6 @@ const pharmacistRoutes = express.Router();
 pharmacistRoutes.get("/", PharmacistController.get);
 pharmacistRoutes.get("/medicines", PharmacistController.getMedicines);
 pharmacistRoutes.post("/add-medicine", PharmacistController.addMedicine);
-pharmacistRoutes.post("/give-medicine", PharmacistController.giveMedicine);
+pharmacistRoutes.post("/giveMedicine", PharmacistController.giveMedicine);
 
 export { pharmacistRoutes };

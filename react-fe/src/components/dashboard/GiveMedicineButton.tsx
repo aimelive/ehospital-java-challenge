@@ -58,7 +58,7 @@ const GiveMedicineForm = ({ patient, onClose }: { patient: Patient, onClose: () 
                     {medicinesData.data.map((item, index) => {
                         return <div key={index} className="flex items-center gap-2 hover:bg-primary hover:bg-opacity-10 p-2 cursor-pointer" onClick={async () => {
                             try {
-                                await Fetcher.post("/pharmacists/give-medicine", {
+                                await Fetcher.post("/pharmacists/giveMedicine", {
                                     patientUsername: patient.username,
                                     name: item.medName,
                                 });

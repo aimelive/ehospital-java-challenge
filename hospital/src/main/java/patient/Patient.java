@@ -10,7 +10,6 @@ import auth.Gender;
 import auth.Role;
 import auth.User;
 import consultation.Consultation;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import lombok.Getter;
 import lombok.NonNull;
@@ -49,9 +48,9 @@ public class Patient extends User {
             throw new AuthenticationException("Incorrect username or password. Please try again.");
         }
 
-        Claims claims = Jwts.claims().setSubject(existPatient.username);
-        claims.put("role", existPatient.role.name());
-        claims.put("username", existPatient.username);
+        // Claims claims = Jwts.claims().setSubject(existPatient.username);
+        // claims.put("role", existPatient.role.name());
+        // claims.put("username", existPatient.username);
 
         Instant currentTimeInstant = Instant.now();
 

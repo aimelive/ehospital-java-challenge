@@ -23,16 +23,16 @@ public class SelectPhysicianController extends HttpServlet {
         try {
             Patient authPatient = Helpers.getAuthPatient(req);
 
-            String email = req.getParameter("email");
+            String physicianEmail = req.getParameter("email");
 
-            if (email == null) {
+            if (physicianEmail == null) {
                 throw new IllegalArgumentException("Physician email must be provided.");
             }
 
-            Physician physician = PhysicianService.findByEmail(email);
+            Physician physician = PhysicianService.findByEmail(physicianEmail);
 
             if (physician == null) {
-                throw new IllegalArgumentException("Physician with email: " + email + ", not found in our system.");
+                throw new IllegalArgumentException("Physician with email: " + physicianEmail + ", not found in our system.");
             }
 
             Patient patient = PatientService.selectPhysician(authPatient.getUsername(), physician);

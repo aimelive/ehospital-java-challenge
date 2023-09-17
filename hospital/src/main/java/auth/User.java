@@ -40,7 +40,7 @@ public class User implements UserInterface {
     }
 
     @Override
-    public ResponseEntity<String> login(String email, String password) throws AuthenticationException {
+    public ResponseEntity<String> login(String identifier, String password) throws AuthenticationException {
         throw new UnsupportedOperationException("Unimplemented method 'login'");
     }
 }

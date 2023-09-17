@@ -9,7 +9,6 @@ import javax.naming.AuthenticationException;
 import auth.Gender;
 import auth.Role;
 import auth.User;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import lombok.Getter;
 import lombok.NonNull;
@@ -41,9 +40,9 @@ public class Physician extends User {
             throw new AuthenticationException("Incorrect email or password. Please try again.");
         }
 
-        Claims claims = Jwts.claims().setSubject(existPhysician.email);
-        claims.put("role", existPhysician.role.name());
-        claims.put("email", existPhysician.email);
+        // Claims claims = Jwts.claims().setSubject(existPhysician.email);
+        // claims.put("role", existPhysician.role.name());
+        // claims.put("email", existPhysician.email);
 
         Instant currentTimeInstant = Instant.now();
 

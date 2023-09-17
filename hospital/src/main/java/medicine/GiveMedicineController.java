@@ -15,8 +15,8 @@ import utils.HttpResponse;
 import utils.RequestBodyUtil;
 import utils.ResponseEntity;
 
-@WebServlet("/pharmacists/provide-medicine")
-public class ProvideMedicineController extends HttpServlet {
+@WebServlet("/pharmacists/giveMedicine")
+public class GiveMedicineController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

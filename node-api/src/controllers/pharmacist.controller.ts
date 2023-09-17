@@ -30,7 +30,7 @@ export class PharmacistController {
   static async giveMedicine(req: Request & { token?: string }, res: Response) {
     try {
       const result = await Fetcher.post(
-        "/pharmacists/provide-medicine",
+        "/pharmacists/giveMedicine",
         req.body,
         req.token
       );
